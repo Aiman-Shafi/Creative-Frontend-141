@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,p{
+    margin: 0;
+}
+
+.header{
+    background: #1C3180;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid #FE630E;
+}
+
+.header h1{
+    font-size: 64px;
+}
+
+.content{
+    padding: 100px 0;
+    width: 950px;
+    margin: auto;
+}
+
+.content h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+.content p span{
+    color: #FE630E;
+    font-weight: bold;
+}
+
+.knowledge{
+    background-color: #1C3180;
+    padding: 100px 0;
+    color: white;
+}
+
+.knowledge h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.knowledge p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.container{
+    width: 950px;
+    margin: auto;
+}
+
+.btn{
+    background-color: #FE630E;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}

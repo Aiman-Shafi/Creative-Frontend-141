@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>HTML FORMS</title>
+</head>
+
+<body>
+    <!-- Iframe  -->
+    <!-- <iframe src="https://aluminatelife.com/" width="500px" height="700px" frameborder="2"></iframe> -->
+
+    <h1>HTML TABLE</h1>
+    <table border="2">
+        <tr>
+           <th>Name</th> 
+           <th>Stu ID</th> 
+           <th>Phone</th> 
+           <th>CGPA</th> 
+        </tr>
+        <tr>
+            <td>Rajib</td>
+            <td>2657</td>
+            <td>01921323</td>
+            <td>3.89</td>
+        </tr>
+        <tr>
+            <td>Sakib</td>
+            <td>2157</td>
+            <td>1234555</td>
+            <td>3.29</td>
+        </tr>
+        <tr>
+            <td>Tamim</td>
+            <td>2657</td>
+            <td>344921323</td>
+            <td>3.49</td>
+        </tr>
+    </table>
+
+    <h1>HTML FORM</h1>
+    <form action="">
+        <fieldset>
+            <legend>Registration Form</legend>
+            <br>
+            <!-- type text  -->
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Ex. John Doe" required><br><br>
+            <!-- type number  -->
+            <label for="phone">Your Phone</label>
+
+            <input type="number" id="phone"> <br><br>
+            <!-- type password  -->
+            <label for="pass">Choose Password</label>
+            <input type="password" id="pass"> <br><br>
+        
+            <!-- dropdown field  -->
+            <label for="country">Select Country</label>
+            <select id="country">
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="mayanmar">mayanmar</option>  
+                <option value="India">India</option>
+                <option value="Pakistan">Pakistan</option>
+            </select> <br><br>
+
+            <!-- radio button  -->
+            <label for="gender">Your Gender:</label> <br><br>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="child">
+            <label for="child">Child</label>
+
+            <!-- date type  -->
+            <br><br>
+            <label for="birth">Data of Birth</label>
+            <input type="date" id="birth" aria-hidden="true">
+
+            <!-- file type  -->
+            <br><br>
+            <label for="uploadImage">Upload your Image</label><br>
+            <input type="file" id="uploadImage">
+
+            <br><br>
+            <label for="comment">Any Message?</label>
+            <textarea id="comment" cols="40" rows="10"></textarea>
+
+            <!-- checkbox  -->
+            <br><br>
+            <input type="checkbox" id="privacy" required>
+            <label for="privacy">Agree to terms and conditions? <a href="#">Privacy policy</a></label>
+
+            <!-- buttons  -->
+            <br><br>
+            <input type="submit" value="Submit Form">
+            <input type="reset">
+        </fieldset>
+    </form>
+</body>
+
+</html>
