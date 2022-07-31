@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+}
+
+:root{
+    --color-cream: #FFFCF5;
+    --color-black: black;
+    --color-blue: #3936C4;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+header{
+    background-color: var(--color-cream);
+}
+
+.container{
+    max-width: 1150px;
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    /* border: 2px solid coral; */
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    margin-left: 25px;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+/* buttons */
+
+.btn-primary{
+    padding: 15px 20px;
+    border: 1px solid var(--color-black);
+    border-radius: 6px;
+    margin-left: 28px;
+    display: inline-block;
+}
+
+.btn-blue{
+    padding: 15px 20px;
+    background-color: var(--color-blue);
+    color: white;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* hero section  */
+.hero{
+    background-color: var(--color-cream);
+    height: 90vh;
+}
+
+.hero-block{
+    display: flex;
+    padding-top: 50px;
+}
+
+.hero-block > * {
+    flex-basis: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 50px;
+}
+
+.hero-content h1{
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero-content p{
+    margin-top: 28px;
+    margin-bottom: 36px;
+}
+
+/* responsive */
+/* jokhn amra desktop first approach (max width)
+mobile first approach (min width) */
+
+
+/* @media (min-width:700px){
+    .hero, header{
+        background-color: orange;
+    }
+}
+
+
+@media (min-width:900px){
+    .hero, header{
+        background-color: red;
+    }
+} */
+
+.features{
+    padding: 100px 0;
+}
+
+.feature-section {
+    display: flex;
+    gap: 30px;
+}
+
+.feature-section > * {
+    flex-basis: 100%;
+    border: 2px solid blue;
+    padding: 38px 28px;
+}
+
+
+
+@media (max-width:768px){
+    .header{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .container{
+        padding: 20px;
+    }
+    
+    nav ul li{
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .hero-block{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+        justify-content: center;
+    }
+
+    .hero-content h1{
+        font-size: 45px;
+    }
+
+    .hero-content{
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .buttons{
+        display: none;
+    }
+
+    .feature-section{
+        flex-direction: column;
+    }
+}
