@@ -8,10 +8,11 @@
     --color-cream: #FFFCF5;
     --color-black: black;
     --color-blue: #3936C4;
+    --color-gray: #545360;
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
     display: block;
 }
 
@@ -22,6 +23,20 @@ body{
 a{
     text-decoration: none;
     color: var(--color-black);
+}
+
+.headings h2{
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.headings p{
+    font-size: 16px;
+    color: var(--color-gray);
+    margin-top: 18px;
+    max-width: 470px;
+    margin: auto;
 }
 
 header{
@@ -70,6 +85,7 @@ nav ul li a{
     color: white;
     border-radius: 6px;
     display: inline-block;
+    transition: all .5s ease;
 }
 
 /* hero section  */
@@ -106,40 +122,189 @@ nav ul li a{
     margin-bottom: 36px;
 }
 
-/* responsive */
-/* jokhn amra desktop first approach (max width)
-mobile first approach (min width) */
+/* logo's section  */
 
-
-/* @media (min-width:700px){
-    .hero, header{
-        background-color: orange;
-    }
+.associated-logos{
+    text-align: center;
+    margin-top: 100px;
 }
 
+.associated-logos h2{
+    font-size: 32px;
+    font-weight: 600;
+}
 
-@media (min-width:900px){
-    .hero, header{
-        background-color: red;
-    }
-} */
+.logos{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 38px;
+}
+
+.logos img{
+    width: 125px;
+}
 
 .features{
     padding: 100px 0;
 }
 
+.feature-block{
+    text-align: center;
+}
+
 .feature-section {
     display: flex;
     gap: 30px;
+    margin-top: 70px;
 }
 
 .feature-section > * {
     flex-basis: 100%;
-    border: 2px solid blue;
+    border: 1px solid #E4E4ED;
     padding: 38px 28px;
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+
+.feature-box:hover{
+    box-shadow: 0px 16px 52px 0px #21202A14;
+    border: 1px solid transparent;
+}
+
+.feature-section img{
+    margin-bottom: 36px;
+}
+
+.feature-section h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.feature-section p{
+    margin: 18px 0;
+    font-size: 16px;
+    color: var(--color-gray);
+}
+
+.feature-section .btn{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* dream section  */
+.dream-block{
+    display: flex;
+}
+
+.dream-block > * {
+   flex-basis: 100%;
+}
+
+.dream-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dream-content p{
+    margin: 20px 0;
+}
+
+.dream-list-icons{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 38px;
+}
+
+.dream-list-icons li{
+    margin-bottom: 12px;
+}
+
+i.bx.bx-check {
+    font-size: 20px;
+    color: #8A5CD7;
+    margin-right: 5px;
+}
+
+/* latest job  */
+
+.latest-job{
+    margin-top: 180px;
+    margin-bottom: 150px;
+}
+
+.jobs-headings{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.all-jobs{
+    display: flex;
+    gap: 30px;
+}
+
+.all-jobs > * {
+    flex-basis: 100%;
+    padding: 45px 28px;
+    border: 1px solid #E2E2EB;
+    border-radius: 10px;
+}
+
+.location{
+    display: flex;
+    margin-top: 22px;
+    margin-bottom: 55px;
+}
+
+.location span{
+    color: var(--color-gray);
+}
+
+.location p{
+    padding: 4px 10px;
+    background-color: #FFF8F0;
+    color: #FF8100;
+    display: inline-block;
+    margin-left: 28px;
+}
+
+i.bx.bxs-map {
+    margin-top: 3px;
+    margin-right: 4px;
+}
+
+.company-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.company-info .info-text{
+    margin-left: 20px;
+}
+
+.apply{
+    display: flex;
+    justify-content: space-between;
+}
+
+.appy-btn .btn{
+    padding: 5px 22px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin-top: 12px;
+    border-radius: 5px;
 }
 
 
+
+.btn-blue:hover {
+    background-color: var(--color-gray);
+    transform: translateY(-10px);
+    box-shadow: hsl(0deg 0% 13% / 29%) 0px 7px 12px;
+}
 
 @media (max-width:768px){
     .header{
