@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+/* 1 rem = 10px 
+2 rem = 32px
+3 rem = 64px */
+
+img{
+    max-width: 100%;
+}
+
+header{
+    padding: 1.2rem 0;
+    background-color: black;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    font-size: 5rem;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    gap: 1.1rem;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.hero{
+    text-align: center;
+    height: 400px;
+    display: grid;
+    align-content: center;
+    background: linear-gradient(123deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+    color: white;
+    font-size: 10px;
+}
+
+.hero h1{
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.blogContainer{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+    column-gap: 30px;
+
+}
+.blogs h2{
+    margin-bottom: 20px;
+}
+
+.myBlogs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.sidebar h2{
+    margin-bottom: 20px;
+}
+
+.sideBlogs .blog{
+    display: grid;
+    /* grid-template-columns: 1fr 3fr; */
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.sideBlogs .blog img{
+    height: 90px;
+    max-width: 90px;
+}
+
+
+.sideBlogs .blog h3{
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+.icons .bx{
+    font-size: 20px;
+    color: blue;
+}
+
+.nav-menu{
+    display: none;
+}
+
+.bx{
+    color: white;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .myBlogs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    html{
+        font-size: 62.5%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+@media only screen and (max-width: 600px) {
+    .blogContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar{
+        margin-top: 20px;
+    }
+
+    .nav-menu{
+        display: block;
+    }
+
+    nav{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    html{
+        font-size: 60.5%;
+    }
+    .myBlogs {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+} 

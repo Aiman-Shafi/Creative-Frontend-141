@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,63 +8,169 @@
     <title>CSS Flexbox</title>
     <link rel="stylesheet" href="style.css">
 
-<style>
-    /* *{
-        margin: 0;
-        padding: 0;   
-    } */
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .box{
-        width: 800px;
-        /* padding: 20px; */
-        background-color: aquamarine;
-        height: 500px;
-        margin: auto;
-        border: 2px solid black;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        /* align-items: center;
-        justify-content: center; */
-        gap: 20px;
-    }
+        .box {
+            max-width: 1000px;
+            background-color: aquamarine;
+            min-height: 700px;
+            margin: auto;
+            border: 2px solid black;
+            /* display: flex;
+            flex-wrap: wrap; */
+            /* flex-flow: row-reverse wrap; */
+            /* justify-content: space-evenly;
+            gap: 20px; */
+            margin-top: 40px;
+            position: relative;
+        }
 
-    /* .box > *{
-        flex-basis: 100%;
-    }  */
+        .items {
+            width: 200px;
+            height: 200px;
+            background-color: #4169e1;
+            position: absolute;
+            /* top: 0; */
+            right: 5%;
+            bottom: 5%;
+        }
 
-    .items{
-        width: 100px;
-        height: 100px;
-        background-color: royalblue;
-        /* flex-basis: 400px; */
-    }
+        .items-2 {
+            background-color: red;
+            bottom: 140px;
+            z-index: 1;
+        }
 
-    .items-2{
-        background-color: red;
-        /* flex-basis: 600px; */
-        /* flex-grow: 1; */
-    }
+        .items-3 {
+            background-color: green;
+            right: 150px;
+            padding: 50px;
+            z-index: 2;
+        }
 
-    .items-3{
-        background-color: green;
-        /* flex-grow: 3; */
-        align-self: flex-end;
-    }
-    .items-4{
-        background-color: pink;
-    }
-</style>    
+        .items-4 {
+            background-color: pink;
+            z-index: 10;
+            padding: 20px;
+        }
+
+        @media(max-width:400px) {
+            .box {
+                background-color: blueviolet;
+            }
+
+            .items-2 {
+                background-color: red;
+                order: 3;
+            }
+
+            .items-3 {
+                background-color: green;
+                order: 2;
+
+            }
+
+            .items-4 {
+                background-color: pink;
+                order: 1;
+            }
+        }
+
+        .wrapper {
+            font-size: 40px;
+            width: 900px;
+            height: 500px;
+            margin: auto;
+        }
+
+        a:link {
+            color: red;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: violet;
+            text-decoration: none;
+        }
+
+        a {
+            transition: all 1s ease-in;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            font-size: 47px;
+            background-color: green;
+        }
+
+        ul li:nth-last-child(3){
+            list-style: none;
+            color: #4169e1;
+            font-size: 99px;
+        }
+
+        input{
+            width: 300px;
+            height: 30px;
+            font-size: 30px;
+            border: 2px solid rgb(82, 79, 78);
+            outline: none;
+        }
+
+        input:focus{
+            border: 3px solid red;
+        }
+
+        ::selection{
+            background-color: red;
+            color:white;
+        }
+
+        p::before{
+            content: "";
+        }
+
+        p::after{
+            content: "";
+        }
+
+
+
+    </style>
 
 </head>
+
 <body>
     <div class="container">
         <div class="box">
-            <div class="items items-1"></div>
-            <div class="items items-2"></div>
-            <div class="items items-3"></div>
-            <div class="items items-4"></div>
+            <div class="items items-1">box 1</div>
+            <div class="items items-2">box 2</div>
+            <div class="items items-3">box 3</div>
+            <div class="items items-4">box 4</div>
+        </div>
+        <div class="wrapper">
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure totam repudiandae voluptate expedita vero rem consequuntur aut fugit nobis repellat optio dicta tenetur cupiditate, nostrum iusto labore inventore dolore cum animi fuga corrupti doloremque error quisquam! Impedit ab laborum officiis.</p>
+            <input type="text" placeholder="name">
+            <a href="https://google.com" target="blank">Hello Codemanbd</a>
+            <ul>
+                <li>lorem</li>
+                <li>ispim</li>
+                <li>asdas</li>
+                <li>sdas</li>
+                <li>asda</li>
+                <li>asda</li>
+                <li>asda</li>
+                <li>asda</li>
+            </ul>
+
+           
         </div>
     </div>
 </body>
+
 </html>

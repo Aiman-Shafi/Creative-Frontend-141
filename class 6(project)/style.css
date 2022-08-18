@@ -298,8 +298,6 @@ i.bx.bxs-map {
     border-radius: 5px;
 }
 
-
-
 .btn-blue:hover {
     background-color: var(--color-gray);
     transform: translateY(-10px);
