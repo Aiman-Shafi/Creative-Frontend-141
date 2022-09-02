@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      #resume01 {
+        animation: updown 1s linear infinite alternate;
+      }
+
+      body {
+        /* background-color: red; */
+        /* animation: colorful 3s ease-in-out infinite alternate-reverse; */
+      }
+
+      @keyframes colorful {
+        0% {
+          background-color: red;
+        }
+        25% {
+          background-color: green;
+        }
+        50% {
+          background-color: yellow;
+        }
+        100% {
+          background-color: aqua;
+        }
+      }
+
+      @keyframes updown {
+        from {
+          transform: translateX(-10px);
+        }
+
+        to {
+          transform: translateX(20px);
+        }
+      }
+
+      .heading {
+        animation: updown 5s ease 2 alternate backwards;
+      }
+    </style>
+
+    <div>
+      <h1 class="heading">Hello JS</h1>
+      <img src="resume.svg" alt="" />
+    </div>
+  </body>
+</html>
