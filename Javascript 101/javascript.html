@@ -7,8 +7,63 @@
     <title>Javascript</title>
   </head>
   <body>
-    <h2>Javascript's Function</h2>
+    <!-- <h2 id="text" style="text-align: center">Javascript's DOM</h2>
+    <a class="button" href="#">Hello Js</a> -->
 
+    <div>
+      <h2>Counter <span id="counter"></span></h2>
+      <button id="increment">+</button>
+      <button id="decrement">-</button>
+    </div>
+
+    <script>
+      const counter = document.getElementById("counter");
+
+      const increment = document.getElementById("increment");
+
+      const decrement = document.getElementById("decrement");
+
+      let number = 1;
+      counter.innerHTML = number;
+
+      increment.addEventListener("click", function () {
+        number = number + 2;
+        counter.innerHTML = number;
+      });
+
+      if (number > 0) {
+        decrement.addEventListener("click", function () {
+          number = number - 5;
+          counter.innerHTML = number;
+        });
+      }
+
+      // increment.addEventListener("click", function () {
+      //   // console.log("click kora hocche!!");
+      //   counter.innerText = "Hae Thikase";
+      // });
+
+      // decrement.addEventListener("click", function () {
+      //   counter.innerText = "Na thik nai!";
+      // });
+      // getting elements
+      // let text = document.getElementById("text");
+      // text.innerHTML = `DOM Manupulation`;
+      // text.style.color = "red";
+      // text.style.backgroundColor = "blue";
+
+      // let btn = document.getElementsByClassName("button");
+      // console.log(btn);
+
+      // let paragraph = document.getElementsByTagName("p");
+      // console.log(paragraph);
+
+      // let element = document.querySelector(".button");
+      // console.log(element);
+
+      // let elementTwo = document.querySelectorAll(".button");
+      // console.log(elementTwo);
+    </script>
     <!-- <script src="learn01.js"></script> -->
     <!-- <script src="numbers.js"></script> -->
     <!-- <script src="variables.js"></script> -->
@@ -16,6 +71,7 @@
     <!-- <script src="object.js"></script> -->
     <!-- <script src="problem.js"></script> -->
     <!-- <script src="loop.js"></script> -->
-    <script src="function.js"></script>
+    <!-- <script src="function.js"></script> -->
+    <!-- <script src="string.js"></script> -->
   </body>
 </html>
