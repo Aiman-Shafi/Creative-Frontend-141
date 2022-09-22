@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.3/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(38, 38, 38, 0.741);
+        padding-top: 20%;
+      }
+
+      #modal-content {
+        background-color: aliceblue;
+        padding: 20px;
+        width: 50%;
+        margin: auto;
+        border: 3px dashed blue;
+      }
+
+      #close {
+        font-size: 30px;
+        cursor: pointer;
+        float: right;
+        clear: both;
+      }
+
+      #popup {
+        cursor: pointer;
+      }
+
+      header {
+        font-size: 30px;
+        margin-top: 10%;
+      }
+
+      #nav {
+        display: none;
+      }
+
+      /* #menu-close{
+        display: none;
+    } */
+    </style>
+  </head>
+
+  <body id="body">
+    <h2>Javascript Popup</h2>
+    <button id="popup">See offer</button>
+    <div id="modal">
+      <div id="modal-content">
+        <span id="close"><i class="bx bx-x"></i></span>
+        <h2>Happy to see you here!</h2>
+        <h3>Use coupon "hello30" to get discount</h3>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
+    <script>
+      let modal = document.getElementById("modal");
+      let popupBtn = document.getElementById("popup");
+      let close = document.getElementById("close");
+      let body = document.getElementById("body");
+
+      body.addEventListener("click", function (e) {
+        console.log(e.target);
+      });
+
+      popupBtn.addEventListener("click", function (event) {
+        modal.style.display = "block";
+      });
+
+      close.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", function (e) {
+        if (e.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

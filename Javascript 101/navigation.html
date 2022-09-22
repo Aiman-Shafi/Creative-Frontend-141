@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navigation</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      body {
+        background: rgb(88, 88, 88);
+        height: 100vh;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      header {
+        background: #000;
+        color: white;
+        font-size: 2rem;
+      }
+
+      .container {
+        max-width: 1140px;
+        height: 100px;
+        margin: auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .container i {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        /* display: none; */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 100%;
+        padding: 2rem;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        /* transform: scale(1); */
+        /* display: none; */
+      }
+
+      .nav__open {
+        right: 0;
+        /* transform: scale(1); */
+        /* top: 0; */
+        transition: right 0.5s ease;
+      }
+
+      .nav__back {
+        right: 100%;
+        /* top: -100%; */
+        /* transform: scale(0); */
+        transition: right 0.5s ease;
+      }
+
+      .nav__close i {
+        float: right;
+        cursor: pointer;
+      }
+
+      .hamburger__menu {
+        cursor: pointer;
+      }
+      @media (min-width: 550px) {
+        nav {
+          position: static;
+          display: flex;
+          gap: 2rem;
+          background-color: black;
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+
+        .hamburger__menu {
+          display: none;
+        }
+
+        .nav__close {
+          display: none;
+        }
+      }
+    </style>
+    <!-- navigation  -->
+    <header>
+      <div class="container">
+        <div class="logo">Logo</div>
+        <nav>
+          <div class="nav__close"><i class="bx bx-right-arrow-alt"></i></div>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="hamburger__menu">
+          <i class="bx bx-menu-alt-right"></i>
+        </div>
+      </div>
+    </header>
+    <!-- class="nav__open" -->
+    <script>
+      const hambugerMenu = document.querySelector(".hamburger__menu");
+      const closeMenu = document.querySelector(".nav__close");
+      const navMenu = document.querySelector("nav");
+
+      hambugerMenu.addEventListener("click", () => {
+        navMenu.classList.add("nav__open");
+        navMenu.classList.remove("nav__back");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        navMenu.classList.remove("nav__open");
+        navMenu.classList.add("nav__back");
+      });
+    </script>
+  </body>
+</html>
