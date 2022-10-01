@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" style="background: wheat">
+      <h2>List of items</h2>
+      <ul id="items" style="background-color: green">
+        <li class="list">Hello</li>
+        <li class="list">lorem</li>
+        <li class="list">1234</li>
+        <li class="list">apPLE</li>
+        <li class="list">banana</li>
+        <li class="list">berry</li>
+        <li class="add list">kiwi</li>
+      </ul>
+      <button id="btn">Add item</button>
+    </div>
+  </body>
+
+  <script>
+    let container = document.querySelector(".container");
+
+    // container.addEventListener("click", (event) => {
+    //   console.log("Container is clicked!");
+    //   event.stopPropagation();
+    //   //   container.style.backgroundColor = "blue";
+    // });
+
+    let items = document.querySelector("#items");
+
+    // items.addEventListener("click", (event) => {
+    // //   console.log("ul is clicked!!!");
+    //   event.stopPropagation();
+    // });
+
+    let lists = document.querySelectorAll(".list");
+
+    // list.addEventListener("click", () => {
+    //   console.log("li is clicked!");
+    // });
+
+    // for (const item of lists) {
+    //   //   console.log(item);
+    //   item.addEventListener("click", (event) => {
+    //     item.style.color = "red";
+    //     // console.log("li is clicked");
+    //     event.stopPropagation();
+    //     // console.log(event.target.);
+    //     event.target.remove();
+    //   });
+    // }
+
+    let btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+      items.innerHTML += `
+        <li class="list">New Item</li>
+        `;
+    });
+
+    items.addEventListener("click", (event) => {
+      //   console.log("ul is clicked!!!");
+      //   event.target.parentNode.removeChild(event.target);
+      //   event.target.classList.contains("add");
+    });
+
+    // console.log(list);
+  </script>
+</html>

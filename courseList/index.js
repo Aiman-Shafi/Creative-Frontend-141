@@ -64,7 +64,7 @@ addStudent.addEventListener("click", (e) => {
 
     studentName.value = "";
     courseName.value = "";
-    coursePrice.value = "";
+    coursePrice.value = "1234";
 
     let deleteItems = document.querySelectorAll(".delete");
     console.log(deleteItems);
