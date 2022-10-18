@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WatchFlix</title>
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS  -->
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="font-source">
+    <header class="bg-white py-5 dark:bg-gray">
+      <div class="container mx-auto flex justify-between">
+        <div>
+          <lord-icon
+            src="https://cdn.lordicon.com/ibppuiwe.json"
+            trigger="hover"
+            colors="primary:#30e8bd,secondary:#d1faf0"
+            scale="75"
+            style="width: 50px; height: 50px"
+          >
+          </lord-icon>
+          <span class="logo">TrendyFlix</span>
+        </div>
+        <div>
+          <button class="btn">
+            Search Movies
+            <lord-icon
+              src="https://cdn.lordicon.com/msoeawqm.json"
+              trigger="hover"
+              colors="primary:#ffffff,secondary:#d1fad7"
+              style="width: 30px; height: 25px"
+              stroke="90"
+            >
+            </lord-icon>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="movies-econtainer">
+      <div class="hero-section">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- <div class="swiper-slide relative">
+              <img
+                src="https://image.tmdb.org/t/p/original/etj8E2o0Bud0HkONVQPjyCkIvpv.jpg"
+                alt=""
+                class="brightness-50 absolute top-0 left-0 w-full h-full object-cover"
+              />
+              <div
+                class="swiper-content absolute top-15 left-20 text-white max-w-[1140px]"
+              >
+                <div class="container mx-auto flex items-start gap-10">
+                  <img
+                    src="https://image.tmdb.org/t/p/original/z2yahl2uefxDCl0nogcRBstwruJ.jpg"
+                    alt=""
+                    class="w-[300px] rounded-lg drop-shadow-2xl hover:"
+                  />
+                  <div class="content text-start" data-aos="fade-down">
+                    <h2 class="text-6xl font-semibold drop-shadow-xl">
+                      House of the Dragon
+                    </h2>
+                    <p class="mt-5 drop-shadow-xl">
+                      The Elric brothers’ long and winding journey comes to a
+                      close in this epic finale, where they must face off
+                      against an unworldly, nationwide threat.
+                    </p>
+                    <h4 class="mt-4">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/surjmvno.json"
+                        trigger="hover"
+                        colors="primary:#ffc738,secondary:#16c79e"
+                        style="width: 60px; height: 60px"
+                      >
+                      </lord-icon>
+                      <span
+                        class="text-4xl align-middle font-semibold ml-[-.5rem] drop-shadow-xl"
+                        >8.5</span
+                      >
+                    </h4>
+                    <div class="slider-buttons">
+                      <button class="btn py-2 px-4 mt-5">
+                        <lord-icon
+                          src="https://cdn.lordicon.com/tdxypxgp.json"
+                          trigger="hover"
+                          colors="primary:#ffffff,secondary:#ffffff"
+                          state="hover"
+                          style="width: 40px; height: 30px"
+                        >
+                        </lord-icon>
+                        Play Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popular-movies">
+      <div class="container mx-auto py-10">
+        <h2 class="text-3xl font-semibold mx-5">Popular Movies</h2>
+        <div
+          class="relative w-full mx-auto snap-mandatory snap-x flex overflow-x-scroll gap-6 py-10 px-5"
+          id="popular-movies"
+        >
+          <!-- <div class="snap-center shrink-0">
+            <img
+              src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+              alt=""
+              class="w-60 h-80 object-fill shrink-0 drop-shadow-xl rounded-lg cursor-pointer duration-500 hover:scale-110"
+            />
+            <h3 class="pt-5 text-lg font-semibold">Movie Name</h3>
+            <p class="text-gray">Release data</p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="popup w-full h-full bg-gray fixed top-0 left-0 z-40 flex items-center justify-center invisible"
+      id="popup"
+    ></div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        // Optional parameters
+        loop: true,
+
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
