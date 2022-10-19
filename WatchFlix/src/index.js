@@ -6,11 +6,28 @@ const BASE_URL = "https://api.themoviedb.org/3";
 const POPULAR_TV_URL = BASE_URL + "/tv/popular?" + API_KEY;
 
 // fetchPopularShow(POPULAR_TV_URL, swiperSlider);
+function showLoader() {
+  document.getElementById("loader").classList.remove("hidden");
+  document.getElementById("loader").classList.add("visible");
+  setTimeout(() => {
+    document.getElementById("loader").classList.add("hidden");
+  }, 5000);
+}
+function removeLoader() {
+  // document.getElementById("loader").classList.remove("visible");
+  document.getElementById("loader").classList.add("hidden");
+}
 
 function fetchPopularShow(api, callBack) {
-  fetch(api)
-    .then((res) => res.json())
-    .then((data) => callBack(data));
+  showLoader();
+  setTimeout(() => {
+    fetch(api)
+      .then((res) => res.json())
+      .then((data) => {
+        removeLoader();
+        callBack(data);
+      });
+  }, 1000);
 }
 
 fetchPopularShow(POPULAR_TV_URL, swiperSlider);
@@ -22,7 +39,7 @@ function swiperSlider(series) {
   let allSeries = series.results;
   allSeries.splice(5, 20);
   console.log(allSeries);
-  allSeries.forEach((series) => {
+  allSeries.map((series) => {
     swiperWrapper.innerHTML += `
     <div class="swiper-slide relative">
         <img
@@ -131,3 +148,19 @@ function displayMovies(movies) {
     }
   });
 }
+
+var swiper = new Swiper(".mySwiper", {
+  // Optional parameters
+  loop: true,
+  autoplay: true,
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

@@ -33,7 +33,7 @@
           <span class="logo">TrendyFlix</span>
         </div>
         <div>
-          <button class="btn">
+          <a href="search.html" class="btn block">
             Search Movies
             <lord-icon
               src="https://cdn.lordicon.com/msoeawqm.json"
@@ -43,7 +43,7 @@
               stroke="90"
             >
             </lord-icon>
-          </button>
+          </a>
         </div>
       </div>
     </header>
@@ -51,6 +51,15 @@
     <div class="movies-econtainer">
       <div class="hero-section">
         <!-- Swiper -->
+        <lord-icon
+          src="https://cdn.lordicon.com/xjovhxra.json"
+          trigger="loop"
+          colors="primary:#16c79e,secondary:#08a88a"
+          style="width: 250px; height: 250px"
+          id="loader"
+          class="hidden"
+        >
+        </lord-icon>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <!-- <div class="swiper-slide relative">
@@ -146,11 +155,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script>
+    <!-- <script>
       var swiper = new Swiper(".mySwiper", {
         // Optional parameters
         loop: true,
-
+        autoplay: true,
         pagination: {
           el: ".swiper-pagination",
           dynamicBullets: true,
@@ -162,7 +171,7 @@
           prevEl: ".swiper-button-prev",
         },
       });
-    </script>
+    </script> -->
     <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
