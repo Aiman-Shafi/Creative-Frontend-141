@@ -6,20 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    .container{
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+        margin: auto;   
+    }
+
+    #loader{
+        display: none;
+    }
+  </style>
   <body>
     <div class="container">
-      <h2>All Countries</h2>
-      <form>
-        <input type="text" placeholder="Search" id="search"/>
-        <input type="submit" id="submit"></input>
-      </form>
-      <img id="loader" src="https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493b98pdbpu3k34bjjaci4bo632q9337lbjkwgkofr5v&rid=200w.gif&ct=g" alt="">
-      <div class="list">
-        <ul id="list">
-          <!-- <li>Name: Bangladesh</li> -->
-        </ul>
-      </div>
+     <div class="all-countries">
+        <h2>All Countries</h2>
+        <form>
+          <input type="text" placeholder="Search" id="search"/>
+          <input type="submit" id="submit"></input>       
+        </form>
+        <br>
+        <form>
+            <label for="region">By Regions</label>
+            <select name="region" id="region">
+               <option value="all">All</option>
+            </select>
+        </form>
+        <img id="loader" src="https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493b98pdbpu3k34bjjaci4bo632q9337lbjkwgkofr5v&rid=200w.gif&ct=g" alt="">
+        <div class="list">
+          <ol id="list">
+            <!-- <li>Name: Bangladesh</li> -->
+          </ol>
+        </div>
+     </div>
+     <div class="details">
+
     </div>
+    </div>
+   
 
     <script src="index.js"></script>
   </body>
